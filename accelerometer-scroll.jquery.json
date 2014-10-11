@@ -1,29 +1,29 @@
 {
-	"name": "accelerometer-scroll",
-	"title": "jQuery Accelerometer Scroll",
-	"description": "A plugin that allows your web page to scoll using device accelerometer apis",
-	"keywords": [
-		"jquery",
-		"accelerometer",
-		"plugins"
-	],
-	"version": "0.0.1",
-	"author": {
-		"name": "James Constable",
-		"email": "me@jamesconstable.co.uk",
-		"url": "http://jamesconstable.co.uk"
-	},
-	"licenses": [
-		{
-			"type": "MIT",
-			"url": "http://zenorocha.mit-license.org/"
-		}
-	],
-	"bugs": "https://github.com/weejames/accelerometer-scroll/issues",
-	"homepage": "http://jamesconstable.co.uk",
-	"docs": "https://github.com/weejames/accelerometer-scroll#readme",
-	"download": "https://github.com/weejames/accelerometer-scroll/archive/master.zip",
-	"dependencies": {
-		"jquery": ">=1.4"
-	}
+    "name": "accelerometer-scroll",
+    "title": "jQuery Accelerometer Scroll",
+    "description": "A plugin that allows your web page to scoll using device accelerometer apis",
+    "keywords": [
+        "jquery",
+        "accelerometer",
+        "plugins"
+    ],
+    "version": "0.0.1",
+    "author": {
+        "name": "James Constable",
+        "email": "me@jamesconstable.co.uk",
+        "url": "http://jamesconstable.co.uk"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://zenorocha.mit-license.org/"
+        }
+    ],
+    "bugs": "https://github.com/weejames/accelerometer-scroll/issues",
+    "homepage": "http://jamesconstable.co.uk",
+    "docs": "https://github.com/weejames/accelerometer-scroll#readme",
+    "download": "https://github.com/weejames/accelerometer-scroll/archive/master.zip",
+    "dependencies": {
+        "jquery": ">=1.4"
+    }
 }
