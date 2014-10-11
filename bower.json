@@ -1,0 +1,17 @@
+{
+	"name": "jquery.accelerometer-scoll",
+	"version": "0.0.1",
+	"homepage": "http://jamesconstable.co.uk",
+	"authors": [
+		"James Constable <me@jamesconstable.co.uk>"
+	],
+	"description": "A jump-start for jQuery plugins development.",
+	"main": "src/jquery.accelerometer-scoll.js",
+	"keywords": [
+		"jquery",
+		"plugin",
+		"acceleromter",
+		"scroll",
+	],
+	"license": "MIT"
+}
