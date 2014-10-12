@@ -21,8 +21,13 @@
     // Avoid Plugin.prototype conflicts
     $.extend(Plugin.prototype, {
         init: function () {
-            var that = this,
-                startPositionChecked = false;
+            var startPositionChecked = false,
+                tiltForwardStart = this.settings.tiltForwardStart,
+                tiltBackStart = this.settings.tiltBackStart,
+                scrollPosition = document.body.scrollTop,
+                scrollIncrement = 5,
+                startScrollIncrement = 5;
+
 
             window.addEventListener("deviceorientation", function(eventData) {
                 // we should normalise for orientation here
@@ -34,11 +39,40 @@
                     startPositionChecked = true;
                 }
 
+                // gamma is the left-to-right tilt in degrees, where right is positive
+                //var tiltLR = eventData.gamma;
+
+                // beta is the front-to-back tilt in degrees, where front is positive
+                var tiltFB = eventData.beta;
+
+                // alpha is the compass direction the device is facing in degrees
+                //var dir = eventData.alpha;
+
+
+                if (tiltFB > tiltForwardStart) {
+                    if (scrollPosition - scrollIncrement >= 0) {
+                        scrollPosition -= scrollIncrement;
+                        window.scrollTo(0, scrollPosition);
+                    }
+
+                } else if (tiltFB < tiltBackStart) {
+                    if (scrollPosition + scrollIncrement <= document.height) {
+                        scrollPosition += scrollIncrement;
+                        window.scrollTo(0, scrollPosition);
+                    }
+
+
+                } else {
+                    scrollIncrement = startScrollIncrement;
+                }
+
+
+
                 // normalise the movement for orientation
-                that.normaliseMovement(eventData);
+                //that.normaliseMovement(eventData);
 
                 // apply movement properties
-                that.handleMovement(eventData);
+                //that.handleMovement(eventData);
             });
         },
 
