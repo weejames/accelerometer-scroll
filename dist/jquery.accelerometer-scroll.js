@@ -34,18 +34,12 @@
                 tiltBackStart = this.settings.tiltBackStart,
                 scrollPosition = document.body.scrollTop,
                 scrollIncrement = 5,
-                startScrollIncrement = 5;
+                startScrollIncrement = 5,
+                tiltDifferential = 15;
 
 
             window.addEventListener("deviceorientation", function(eventData) {
                 // we should normalise for orientation here
-
-                if (!startPositionChecked) {
-
-                    // check start
-
-                    startPositionChecked = true;
-                }
 
                 // gamma is the left-to-right tilt in degrees, where right is positive
                 //var tiltLR = eventData.gamma;
@@ -56,6 +50,13 @@
                 // alpha is the compass direction the device is facing in degrees
                 //var dir = eventData.alpha;
 
+                if (!startPositionChecked) {
+                    startAngle = tiltFB;
+                    tiltBackStart = startAngle - tiltDifferential;
+                    tiltForwardStart = startAngle + tiltDifferential;
+
+                    startPositionChecked = true;
+                }
 
                 if (tiltFB > tiltForwardStart) {
                     if (scrollPosition - scrollIncrement >= 0) {
