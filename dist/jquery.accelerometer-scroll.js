@@ -39,6 +39,10 @@
                 events = 0,
                 inertia = 5;
 
+            window.addEventListener("orientationchange", function() {
+                //console.log(window.orientation);
+            }, false);
+
 
             window.addEventListener("deviceorientation", function(eventData) {
                 // we should normalise for orientation here
