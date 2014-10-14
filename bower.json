@@ -5,7 +5,7 @@
 	"authors": [
 		"James Constable <me@jamesconstable.co.uk>"
 	],
-	"description": "A jump-start for jQuery plugins development.",
+	"description": "Provides accelermoter based 'tilt to scroll' functionality to any web page.",
 	"main": "src/jquery.accelerometer-scoll.js",
 	"keywords": [
 		"jquery",
